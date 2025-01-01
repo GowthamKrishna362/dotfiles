@@ -2,6 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+source ~/.bash_profile
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -72,6 +73,7 @@ xterm*|rxvt*)
     ;;
 esac
 
+precmd() { printf "\033]7;file://%s/%s\007" "$(hostname)" "$(pwd | sed 's/ /%20/g')"; }
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
