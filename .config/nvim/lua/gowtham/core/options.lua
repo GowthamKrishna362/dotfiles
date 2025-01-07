@@ -24,3 +24,6 @@ opt.clipboard:append("unnamedplus")
 
 opt.splitright = true
 opt.splitbelow = true
+
+opt.undofile = true
+opt.undodir = vim.fn.expand("~/.config/nvim/undo")
