@@ -4,7 +4,7 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    { "folke/neodev.nvim", opts = {} },
+    { "folke/neodev.nvim",                   opts = {} },
   },
   config = function()
     -- import lspconfig plugin
@@ -96,6 +96,18 @@ return {
           },
         })
       end,
+      ["eslint"] = function()
+        -- configure eslint server (disable underlining)
+        lspconfig["eslint"].setup({
+          capabilities = capabilities,
+          on_attach = function(client, bufnr)
+            vim.diagnostic.config({
+              underline = false, -- Disable diagnostic underlining for ESLint
+            }, bufnr)
+          end,
+        })
+      end,
     })
   end,
+
 }

@@ -2,7 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-source ~/.bash_profile
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -90,6 +89,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
+export EDITOR="nvim"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -97,7 +97,18 @@ alias cdvimconf="cd ~/dotfiles/.config/nvim/"
 alias vimconf="cdvimconf && nvim"
 alias piconf="nvim ~/dotfiles/.config/picom.conf"
 alias i3conf="nvim ~/dotfiles/.config/i3"
+alias vim="nvim"
 alias kitconf="nvim ~/dotfiles/.config/kitty/kitty.conf"
+alias startvpn="cd ~/Desktop/Work/VPN/ && sudo openvpn3 session-start --config ./Desktop/Work/VPN/device_1735802922618_gowtham_krishna@komprise_com@komprise.openvpn.com_[San_Jose_\(CA\)].ovpn"
+alias cdkdc="cd ~/Desktop/Work/Komprise/kpsrc/kdc/"
+alias cdwebr="cd ~/Desktop/Work/Komprise/kpsrc/kdc/director/web-react/"
+alias install8080="cdkdc && mvn clean install -Dskiptests"
+alias start8080="cdkdc && mvn cargo:run"
+alias start3000="cdwebr && npm start"
+alias cdkomp="cd ~/Desktop/Work/Komprise/"
+alias cdwork="cd ~/Desktop/Work/"
+alias killport='f() { lsof -t -i:$1 | xargs kill -9; }; f'
+
 
 
 # Add an "alert" alias for long running commands.  Use like so:
