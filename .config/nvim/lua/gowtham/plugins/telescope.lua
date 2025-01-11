@@ -12,7 +12,6 @@ return {
     local builtin = require("telescope.builtin")
     local action_state = require("telescope.actions.state")
 
-    telescope.load_extension("fzf")
 
     local telescope_custom_actions = {}
 
@@ -45,6 +44,11 @@ return {
     telescope.setup({
       defaults = {
         path_display = { "smart" },
+        pickers = {
+          oldfiles = {
+            max_results = 10,
+          }
+        },
         mappings = {
           i = {
             ["<TAB>"] = actions.toggle_selection,
@@ -72,14 +76,18 @@ return {
           },
         },
       },
+      extensions = {
+        fzf = {}
+      }
     })
 
+    telescope.load_extension("fzf")
 
 
     local keymap = vim.keymap -- for conciseness
-    keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
     keymap.set("n", "<leader>fg", function() builtin.git_files({ use_git_root = false }) end,
-      { desc = "Fuzzy find files in cwd" })
+      { desc = "Fuzzy find git files in cwd" })
+    keymap.set("n", "<leader>fb", function() builtin.buffers({}) end, { desc = "Fuzzy find buffers" })
     keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
     keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
     keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })

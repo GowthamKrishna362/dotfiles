@@ -32,7 +32,9 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-
+workspace 1 output HDMI-1
+workspace 2 output DP-1
+workspace 3 output eDP-1
 
 # focus the child container
 #bindsym $mod+d focus child

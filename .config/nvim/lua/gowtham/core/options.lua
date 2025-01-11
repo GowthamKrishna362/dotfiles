@@ -5,7 +5,6 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 
--- tabs and indentatio:q:n
 
 opt.shiftwidth = 2
 opt.expandtab = true
@@ -13,11 +12,12 @@ opt.autoindent = true
 
 opt.wrap = false
 
--- search settings
 opt.ignorecase = true
 
 opt.termguicolors = true
+-- needed for vim tpipeline
 opt.background = "dark"
+
 opt.signcolumn = "yes"
 
 opt.clipboard:append("unnamedplus")
@@ -27,3 +27,10 @@ opt.splitbelow = true
 
 opt.undofile = true
 opt.undodir = vim.fn.expand("~/.config/nvim/undo")
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = false,
+  underline = false,
+  update_in_insert = false,
+})

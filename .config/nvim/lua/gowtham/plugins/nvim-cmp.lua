@@ -6,9 +6,7 @@ return {
     "hrsh7th/cmp-path",   -- source for file system paths
     {
       "L3MON4D3/LuaSnip",
-      -- follow latest release.
-      version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-      -- install jsregexp (optional!).
+      version = "v2.*",
       build = "make install_jsregexp",
     },
     "saadparwaiz1/cmp_luasnip",     -- for autocompletion
@@ -18,15 +16,10 @@ return {
   },
   config = function()
     local cmp = require("cmp")
-    require("vim-react-snippets").lazy_load()
-
-
     local luasnip = require("luasnip")
-
     local lspkind = require("lspkind")
-
-    -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
     require("luasnip.loaders.from_vscode").lazy_load()
+    require("vim-react-snippets").lazy_load()
 
     cmp.setup({
       completion = {
@@ -37,14 +30,15 @@ return {
           luasnip.lsp_expand(args.body)
         end,
       },
+
+
       mapping = cmp.mapping.preset.insert({
         ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
         ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
         ["<C-b>"] = cmp.mapping.scroll_docs(-4),
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
-        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
-        ["<C-e>"] = cmp.mapping.abort(),        -- close completion window
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
       }),
       -- sources for autocompletion
       sources = cmp.config.sources({

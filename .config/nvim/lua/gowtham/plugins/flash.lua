@@ -7,7 +7,8 @@ return {
       -- Customize Flash options here (optional)
       modes = {
         char = {
-          jump_labels = true, -- Show jump labels
+          enabled = false,                 -- disable character mode entirely
+          keys = { 'f', 'F', 't', 'T' },   -- explicitly disable these keys
         },
       },
     },
