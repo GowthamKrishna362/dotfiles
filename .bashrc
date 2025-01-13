@@ -2,6 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+eval "$(zoxide init bash)"
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -108,6 +109,7 @@ alias start3000="cdwebr && npm start"
 alias cdkomp="cd ~/Desktop/Work/Komprise/"
 alias cdwork="cd ~/Desktop/Work/"
 alias killport='f() { lsof -t -i:$1 | xargs kill -9; }; f'
+alias cd="z"
 
 
 
