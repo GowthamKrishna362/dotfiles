@@ -31,12 +31,11 @@ return {
           },
           n = {
             ["<TAB>"] = actions.toggle_selection,
-            ["<S-CR>"] = actions.select_tab, -- Remap Shift + Enter to Ctrl + t behavior
             ["msv"] = custom_actions.multi_selection_open_vsplit,
             ["msh"] = custom_actions.multi_selection_open_split,
             ["mst"] = custom_actions.multi_selection_open_tab,
-            ["sv"] = custom_actions.open_vsplit,
-            ["sh"] = custom_actions.open_hsplit,
+            ["sv"] = actions.select_vertical,
+            ["sh"] = actions.select_horizontal,
           },
         },
       },
@@ -53,8 +52,6 @@ return {
 
     local keymap = vim.keymap -- for conciseness
 
-    keymap.set("n", "<leader>fg", function() require("telescope.builtin").git_files({ use_git_root = false }) end,
-      { desc = "Fuzzy find git files in cwd" })
     keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Fuzzy find buffers" })
     keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "Fuzzy find files in cwd" })
     keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Fuzzy find recent files" })

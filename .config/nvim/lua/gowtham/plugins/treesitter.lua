@@ -9,7 +9,7 @@ return {
     local treesitter = require("nvim-treesitter.configs")
     require('nvim-ts-autotag').setup()
 
-    treesitter.setup({ -- enable syntax highlighting
+    treesitter.setup({
       highlight = {
         enable = true,
       },
@@ -22,17 +22,12 @@ return {
         "yaml",
         "html",
         "css",
-        "prisma",
         "markdown",
         "markdown_inline",
-        "svelte",
-        "graphql",
         "bash",
         "lua",
         "vim",
-        "dockerfile",
         "gitignore",
-        "query",
         "vimdoc",
         "c",
       },
