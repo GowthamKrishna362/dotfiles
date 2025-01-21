@@ -34,6 +34,7 @@ keymap.set("n", "<m-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase W
 keymap.set('n', '{', '<cmd>keepjumps normal! {<CR>', { noremap = true, silent = true })
 keymap.set('n', '}', '<cmd>keepjumps normal! }<CR>', { noremap = true, silent = true })
 
+keymap.set("n", "<esc>", ":noh<cr>", opts)
 
 vim.api.nvim_set_keymap('n', '<A-Tab>', ':b#<CR>', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('n', '<Leader><Tab>', ':b#<CR>', { noremap = true, silent = true })

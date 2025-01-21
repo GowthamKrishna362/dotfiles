@@ -18,39 +18,48 @@ return {
     telescope.setup({
       defaults = {
         path_display = { "smart" },
-        pickers = {
-          oldfiles = {
-            max_results = 10,
-          }
-        },
-        mappings = {
+        mappings =
+        {
           i = {
             ["<TAB>"] = actions.toggle_selection,
-            ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-            ["<C-j>"] = actions.move_selection_next,     -- move to next result
+            ["<C-k>"] = actions.move_selection_previous,
+            ["<C-j>"] = actions.move_selection_next,
+            ["<esc>"] = actions.close
+
           },
           n = {
             ["<TAB>"] = actions.toggle_selection,
+            ["<S-CR>"] = actions.select_vertical,
+            ["sv"] = actions.select_vertical,
+            ["sh"] = actions.select_horizontal,
+            ["<esc>"] = actions.close,
             ["msv"] = custom_actions.multi_selection_open_vsplit,
             ["msh"] = custom_actions.multi_selection_open_split,
             ["mst"] = custom_actions.multi_selection_open_tab,
-            ["sv"] = actions.select_vertical,
-            ["sh"] = actions.select_horizontal,
           },
         },
+      },
+      pickers = {
+        oldfiles = {
+          max_results = 10,
+        },
+        buffers = {
+          sort_lastused = true,
+        }
       },
       extensions = {
         fzf = {}
       }
     })
 
+
     telescope.load_extension("fzf")
-    telescope.load_extension("live_grep_args") -- Load the live grep args extension
+    telescope.load_extension("live_grep_args")
 
     local live_grep_args = telescope.extensions.live_grep_args
 
 
-    local keymap = vim.keymap -- for conciseness
+    local keymap = vim.keymap
 
     keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Fuzzy find buffers" })
     keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "Fuzzy find files in cwd" })

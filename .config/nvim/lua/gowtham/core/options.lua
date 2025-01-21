@@ -28,10 +28,10 @@ opt.undofile = true
 opt.undodir = vim.fn.expand("~/.config/nvim/undo")
 
 vim.diagnostic.config({
-        virtual_text = true,
-        signs = false,
-        underline = false,
-        update_in_insert = false,
+  virtual_text = true,
+  signs = false,
+  underline = false,
+  update_in_insert = false,
 })
 
 vim.uv.os_setenv("JAVA_HOME", "/usr/lib/jvm/java-17-openjdk-amd64/")

@@ -2,8 +2,8 @@ return {
   "folke/tokyonight.nvim",
   config = function()
     require("tokyonight").setup({
-      style = "moon",         -- Use the 'moon' variant
-      transparent = true,     -- Set to true if you want a transparent background
+      style = "moon",
+      transparent = vim.g.transparent_enabled,
       terminal_colors = true, -- Apply theme to terminal
       styles = {
         comments = { italic = true },
