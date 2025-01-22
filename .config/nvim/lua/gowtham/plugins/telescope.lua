@@ -44,7 +44,8 @@ return {
           max_results = 10,
         },
         buffers = {
-          sort_lastused = true,
+          sort_mru = true,
+          ignore_current_buffer = true
         }
       },
       extensions = {
