@@ -4,13 +4,6 @@ return {
   enabled = true,
   config = function()
     require('gitsigns').setup {
-      signs = {
-        add          = { text = '│' },
-        change       = { text = '│' },
-        delete       = { text = '_' },
-        topdelete    = { text = '‾' },
-        changedelete = { text = '~' },
-      },
       on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
         local function map(mode, l, r, opts)
@@ -20,5 +13,8 @@ return {
         end
       end
     }
+    vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
+    vim.keymap.set("n", "<leader>grh", ":Gitsigns reset_hunk<CR>", { desc = "reset hunk" })
+    vim.keymap.set("n", "<leader>grb", ":Gitsigns reset_buffer<CR>", { desc = "reset buffer" })
   end,
 }

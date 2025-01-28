@@ -60,8 +60,15 @@ return {
     local live_grep_args = telescope.extensions.live_grep_args
 
 
-    local keymap = vim.keymap
+    vim.api.nvim_create_user_command("Notes", function()
+      builtin.find_files({
+        prompt_title = "Search Notes",
+        search_dirs = { "~/Desktop/Notes/" },
+      })
+    end, { desc = "Search through your notes using Telescope" })
 
+
+    local keymap = vim.keymap
     keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Fuzzy find buffers" })
     keymap.set("n", "<leader><leader>", builtin.find_files, { desc = "Fuzzy find files in cwd" })
     keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Fuzzy find recent files" })
