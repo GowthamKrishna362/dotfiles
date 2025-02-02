@@ -4,6 +4,7 @@ return {
     require("tokyonight").setup({
       style = "moon",
       terminal_colors = true, -- Apply theme to terminal
+      -- transparent = true,
       styles = {
         comments = { italic = true },
         keywords = { italic = true },
