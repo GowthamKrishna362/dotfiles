@@ -34,4 +34,6 @@ vim.diagnostic.config({
   update_in_insert = false,
 })
 
+opt.scrolloff = 8
+
 vim.uv.os_setenv("JAVA_HOME", "/usr/lib/jvm/java-17-openjdk-amd64/")

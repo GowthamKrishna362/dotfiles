@@ -3,7 +3,7 @@ return {
   event = { "BufReadPost", "BufNewFile" },
   config = function()
     require("illuminate").configure({
-      modes_allowlist = { 'n', 'i', 'c' }, -- Exclude 'v' (visual mode)
+      modes_allowlist = { 'n', 'i', 'c' },
     })
     vim.keymap.set("n", "]]", function()
       require("illuminate").goto_next_reference()

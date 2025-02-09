@@ -5,6 +5,7 @@ return {
   config = function()
     local conform = require("conform")
 
+
     conform.setup({
       formatters_by_ft = {
         javascript = { "prettier" },
@@ -16,6 +17,17 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+        java = { "google_java_format" },
+      },
+      formatters = {
+        google_java_format = {
+          command = "java",
+          args = {
+            "-jar", vim.fn.expand("~/.local/bin/google-java-format.jar"),
+            "--aosp" -- Optional: Makes it closer to IntelliJ's defaults
+          },
+          stdin = true,
+        },
       },
       format_on_save = {
         lsp_fallback = true,

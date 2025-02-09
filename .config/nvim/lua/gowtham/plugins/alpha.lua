@@ -1,13 +1,11 @@
 return {
   "goolord/alpha-nvim",
-  -- dependencies = { 'echasnovski/mini.icons' },
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
     local startify = require("alpha.themes.startify")
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
 
-    -- Set header
     dashboard.section.header.val = {
       "                                                     ",
       "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
@@ -28,8 +26,6 @@ return {
     }
 
     alpha.setup(dashboard.opts)
-
-    -- Disable folding on alpha buffer
     vim.cmd([[
     autocmd FileType alpha setlocal nofoldenable
 ]])

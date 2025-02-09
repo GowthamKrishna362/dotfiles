@@ -29,6 +29,6 @@ style = "Italic"
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
-[window]
-opacity = 0.7
+# [window]
+# opacity = 0.7
 

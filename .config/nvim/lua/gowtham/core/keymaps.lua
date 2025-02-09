@@ -14,17 +14,11 @@ keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })    
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split
 keymap.set("n", "<m-x>", "<cmd>close<CR>", { desc = "Close current split" })      -- close current split
 
-keymap.set("n", "J", "mzJ`z")
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
-keymap.set("n", "n", "nzzzv")
-keymap.set("n", "N", "Nzzzv")
 
 keymap.set('n', 'gj', '<C-o>', { noremap = true, silent = true })
 keymap.set('n', 'gk', '<C-i>', { noremap = true, silent = true })
 
 
--- Resize window using <ctrl> arrow keys
 keymap.set("n", "<m-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
 keymap.set("n", "<m-Down>", "<cmd>resize -3<cr>", { desc = "Decrease Window Height" })
 keymap.set("n", "<m-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease Window Width" })
@@ -34,7 +28,7 @@ keymap.set("n", "<m-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase W
 keymap.set('n', '{', '<cmd>keepjumps normal! {<CR>', { noremap = true, silent = true })
 keymap.set('n', '}', '<cmd>keepjumps normal! }<CR>', { noremap = true, silent = true })
 
-keymap.set("n", "<esc>", ":noh<cr>", opts)
+keymap.set("n", "<esc>", ":noh<cr>")
 
-vim.api.nvim_set_keymap('n', '<A-Tab>', ':b#<CR>', { noremap = true, silent = true })
--- vim.api.nvim_set_keymap('n', '<Leader><Tab>', ':b#<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<A-Tab>', ':b#<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<A-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
