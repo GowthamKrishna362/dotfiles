@@ -4,7 +4,7 @@ return {
     config = function()
       require("aerial").setup({
       })
-      vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+      vim.keymap.set("n", "<leader>A", "<cmd>AerialToggle!<CR>")
     end,
   },
 }

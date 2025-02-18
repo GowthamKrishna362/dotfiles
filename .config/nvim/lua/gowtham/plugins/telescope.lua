@@ -25,7 +25,7 @@ return {
             ["<TAB>"] = actions.toggle_selection,
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-j>"] = actions.move_selection_next,
-            ["<esc>"] = actions.close
+            -- ["<esc>"] = actions.close
 
           },
           n = {

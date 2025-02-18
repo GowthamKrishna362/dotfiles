@@ -25,7 +25,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.undofile = true
-opt.undodir = vim.fn.expand("~/.config/nvim/undo")
+opt.undodir = vim.fn.expand("~/.local/share/nvim/undo")
 
 vim.diagnostic.config({
   virtual_text = true,
@@ -35,5 +35,6 @@ vim.diagnostic.config({
 })
 
 opt.scrolloff = 8
+-- opt.cmdheight = 0
 
 vim.uv.os_setenv("JAVA_HOME", "/usr/lib/jvm/java-17-openjdk-amd64/")

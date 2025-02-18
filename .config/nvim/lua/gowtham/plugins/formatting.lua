@@ -29,10 +29,8 @@ return {
           stdin = true,
         },
       },
-      format_on_save = {
-        lsp_fallback = true,
-        async = false,
-        timeout_ms = 1000,
+      format_after_save = {
+        lsp_format = "fallback",
       },
     })
 

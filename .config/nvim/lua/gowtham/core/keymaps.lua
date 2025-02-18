@@ -30,5 +30,4 @@ keymap.set('n', '}', '<cmd>keepjumps normal! }<CR>', { noremap = true, silent = 
 
 keymap.set("n", "<esc>", ":noh<cr>")
 
--- vim.api.nvim_set_keymap('n', '<A-Tab>', ':b#<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<A-Tab>', ':bprevious<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-Tab>', ':b#<CR>', { noremap = true, silent = true })
