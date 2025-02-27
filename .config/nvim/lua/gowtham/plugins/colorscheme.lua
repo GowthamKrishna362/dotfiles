@@ -3,7 +3,7 @@ return {
   config = function()
     require("tokyonight").setup({
       style = "moon",
-      -- transparent = true,
+      transparent = true,
       styles = {
         comments = { italic = true },
         keywords = { italic = true },
