@@ -2,7 +2,7 @@ return {
   "folke/tokyonight.nvim",
   config = function()
     require("tokyonight").setup({
-      style = "moon",
+      style = "storm",
       transparent = true,
       styles = {
         comments = { italic = true },
