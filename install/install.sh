@@ -21,3 +21,4 @@ done
 
 
 cd ~/dotfiles/ && stow -R --override=* .
+chsh -s $(which zsh)
