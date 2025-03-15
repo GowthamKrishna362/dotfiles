@@ -1,0 +1,24 @@
+include ~/.config/i3/assignments.conf
+include ~/.config/i3/scripts.conf
+include ~/.config/i3/appearance.conf
+include ~/.config/i3/tiling.conf
+
+# i3 config file (v4)
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+
+set $mod Mod4
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
+
+workspace 1 output HDMI-1
+workspace 2 output DP-1
+workspace 3 output eDP-1
+
+
