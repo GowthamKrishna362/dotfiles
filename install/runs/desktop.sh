@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt install -y i3
-sudo apt install python3-i3ipc
+sudo apt install -y python3-i3ipc
 sudo apt install -y nitrogen
 sudo apt install -y rofi
 

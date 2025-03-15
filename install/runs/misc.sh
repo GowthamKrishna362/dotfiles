@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo apt install nodejs npm
-sudo apt install xclip
+sudo apt install -y nodejs npm
+sudo apt install -y xclip
