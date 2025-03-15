@@ -3,22 +3,26 @@
 # Make all scripts in runs/ executable
 chmod +x runs/*
 
-# Run prereqs.sh first if it exists and is executable
-if [[ -f "runs/prereqs.sh" && -x "runs/prereqs.sh" ]]; then
-    echo "Running prereqs.sh..."
-    "runs/prereqs.sh"
+# Run first.sh first if it exists and is executable
+if [[ -f "runs/first.sh" && -x "runs/first.sh" ]]; then
+    echo "Running first.sh..."
+    "runs/first.sh"
 else
-    echo "prereqs.sh not found or not executable, skipping..."
+    echo "first.sh not found or not executable, skipping..."
 fi
 
-# Execute all other scripts except prereqs.sh
+# Execute all scripts except first.sh and last.sh
 for script in runs/*; do
-    if [[ -f "$script" && -x "$script" && "$script" != "runs/prereqs.sh" ]]; then
+    if [[ -f "$script" && -x "$script" && "$script" != "runs/first.sh" && "$script" != "runs/last.sh" ]]; then
         echo "Running $script..."
         "$script"
     fi
 done
 
-
-cd ~/dotfiles/ && stow -R --override=* .
-chsh -s $(which zsh)
+# Run last.sh last if it exists and is executable
+if [[ -f "runs/last.sh" && -x "runs/last.sh" ]]; then
+    echo "Running last.sh..."
+    "runs/last.sh"
+else
+    echo "last.sh not found or not executable, skipping..."
+fi
