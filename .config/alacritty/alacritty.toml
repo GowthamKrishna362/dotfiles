@@ -31,4 +31,4 @@ style = "Regular"
 
 [window]
 opacity = 0.9
-
+padding = { y = 3 }
