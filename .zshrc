@@ -104,6 +104,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+function osd() {
+  openvpn3 session-manage --session-path "$1" --disconnect
+}
+
 export EDITOR="nvim"
 alias ll='ls -alF'
 alias la='ls -A'
@@ -114,11 +118,13 @@ alias piconf="nvim ~/dotfiles/.config/picom.conf"
 alias i3conf="nvim ~/dotfiles/.config/i3"
 alias vim="nvim"
 alias v="nvim"
-alias startvpn="openvpn3 session-start --config device_1735802922618_gowtham_krishna@komprise_com@komprise.openvpn.com_[San_Jose_\(CA\)].ovpn"
-alias cdkdc="cd ~/Desktop/Work/Komprise/kpsrc/kdc/"
+alias startvpn="openvpn3 session-start --config device_1735802922618_gowtham_krishna@komprise_com@komprise.openvpn.com_\[San_Jose_\(CA\)\].ovpn"
 alias cdwebr="cd ~/Desktop/Work/Komprise/kpsrc/kdc/director/web-react/"
-alias install8080="cdkdc && mvn clean install -Dskiptests"
-alias start8080="cdkdc && mvn cargo:run"
+alias cdkdc="cd ~/Desktop/Work/Komprise/kpsrc/kdc/"
+alias commentHijackFilter='(cd ./director/web/src/main/webapp/WEB-INF && sed -i "75,82 s/^/<!-- /; 75,82 s/\$/ -->/" web.xml)'
+alias uncommentHijackFilter='(cd ./director/web/src/main/webapp/WEB-INF && sed -i "75,82 s/^<!-- //; 75,82 s/ -->\$//" web.xml)'
+alias install8080="cdkdc && commentHijackFilter && cdkdc && mvn clean install -Dskiptests"
+alias start8080="cdkdc && uncommentHijackFilter && mvn cargo:run"
 alias start3000="cdwebr && npm start"
 alias cdkomp="cd ~/Desktop/Work/Komprise/"
 alias cdwork="cd ~/Desktop/Work/"

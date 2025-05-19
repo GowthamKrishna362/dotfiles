@@ -33,7 +33,9 @@ return {
       },
 
       mapping = cmp.mapping.preset.insert({
+        ['<C-e>'] = cmp.config.disable,
         ["<CR>"] = cmp.mapping.confirm({ select = false }),
+        ['<C-x>'] = cmp.mapping.abort(),
         ["<Tab>"] = cmp.mapping.confirm({ select = true }),
       }),
       sources = cmp.config.sources({

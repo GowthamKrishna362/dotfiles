@@ -3,9 +3,9 @@
 sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-sudo apt install -y alacritty
-sudo apt install -y tmux
-sudo apt install -y zoxide
+sudo apt install alacritty -y
+sudo apt install tmux     -y
+sudo apt install zoxide   -y
 
 git clone https://github.com/sxyazi/yazi.git
 cd yazi

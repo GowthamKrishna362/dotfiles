@@ -6,7 +6,7 @@ return {
       mappings = {
         '<C-u>', '<C-d>',
         '<C-b>', '<C-f>',
-        '<C-y>', '<C-e>',
+        '<C-y>',
       },
       duration_multiplier = 0.5,
     })
