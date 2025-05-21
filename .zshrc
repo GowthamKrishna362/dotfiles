@@ -129,8 +129,8 @@ alias start3000="cdwebr && npm start"
 alias cdkomp="cd ~/Desktop/Work/Komprise/"
 alias cdwork="cd ~/Desktop/Work/"
 alias killport='f() { lsof -t -i:$1 | xargs kill -9; }; f'
-alias cd="z"
-eval "$(zoxide init --cmd cd zsh)"     
+# alias cd="z"
+# eval "$(zoxide init --cmd cd zsh)"     
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
