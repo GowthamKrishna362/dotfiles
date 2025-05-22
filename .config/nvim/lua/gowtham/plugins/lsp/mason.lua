@@ -20,7 +20,10 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier",
-        "eslint_d"
+        "eslint_d",
+        "pyright",
+        "pylint",
+        "typescript-language-server"
       },
     })
   end,

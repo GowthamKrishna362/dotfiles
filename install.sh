@@ -25,15 +25,27 @@ utils=(
   xclip trash-cli lazygit
 )
 
-for pkg in "${base_pkgs[@]}" "${wm_pkgs[@]}" "${cli_tools[@]}" "${dev_tools[@]}" "${utils[@]}"; do
+misc=(
+  ttf-jetbrains-mono-nerd
+)
+
+for pkg in "${base_pkgs[@]}" "${wm_pkgs[@]}" "${cli_tools[@]}" "${dev_tools[@]}" "${utils[@]}" "${misc[@]}"; do
   sudo pacman -S --noconfirm --needed "$pkg" || echo "❌ Failed to install $pkg"
 done
 
 yay -S --noconfirm google-chrome
+yay -S --noconfirm slack-desktop
 
-# rm ~/.zshrc
-# rm ~/.bashrc
-# cd ~/dotfiles/ && stow . 
-#
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+
+
+rm ~/.zshrc
+rm ~/.bashrc
+cd ~/dotfiles/ && stow . 
+
+
+chsh -s $(which zsh)
+
