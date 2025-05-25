@@ -1,0 +1,70 @@
+/* Define colors */
+@define-color color-font        #dcdfe1;
+@define-color color-bg-module   #44516b;
+@define-color color-active-bg   #61afef;
+@define-color color-active-fg   #ffffff;
+@define-color color-inactive-fg #888888;
+@define-color color-critical    #ff0000;
+
+/* Global styles */
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: @color-font;
+}
+
+#waybar {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Module containers */
+.modules-left,
+.modules-center {
+  background-color: @color-bg-module;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.modules-left {
+  margin-left: 15px;
+}
+
+.modules-center {
+  border-width: 0px;
+}
+
+/* Individual modules */
+#network,
+#battery,
+#bluetooth,
+#pulseaudio,
+#backlight,
+#memory {
+  background-color: @color-bg-module;
+  margin-top: 10px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+/* Special states */
+#custpm-temperature.critical,
+#pulseaudio.muted {
+  color: @color-critical;
+  padding-top: 0;
+}
+
+/* Workspaces */
+#workspaces button {
+  color: @color-inactive-fg;
+  padding: 2px 8px;
+}
+
+#workspaces button.active {
+  background-color: @color-active-bg;
+  color: @color-active-fg;
+  margin: 0 2px;
+  border-radius: 10px;
+}
