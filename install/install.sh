@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Make all scripts in runs/ executable
-chmod +x runs/*
+ chmod +x runs/*
 
 # Run first.sh first if it exists and is executable
 if [[ -f "runs/first.sh" && -x "runs/first.sh" ]]; then
