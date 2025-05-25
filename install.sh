@@ -33,6 +33,7 @@ hyprland=(
   hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gnome
   pipewire wireplumber
   grim slurp
+  hyprlock swww waypaper
 )
 
 for pkg in "${base_pkgs[@]}" "${wm_pkgs[@]}" "${cli_tools[@]}" "${dev_tools[@]}" "${utils[@]}" "${misc[@]}" "${hyprland[@]}"; do
