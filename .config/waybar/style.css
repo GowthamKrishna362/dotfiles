@@ -10,7 +10,6 @@
 * {
   font-family: "JetBrainsMono Nerd Font", sans-serif;
   font-weight: bold;
-  font-size: 16px;
   color: @color-font;
 }
 
@@ -29,11 +28,14 @@
 }
 
 .modules-left {
+  font-size: 13px;
   margin-left: 15px;
 }
 
 .modules-center {
   border-width: 0px;
+  font-size: 16px;
+  padding: 2px 0px;
 }
 
 /* Individual modules */
@@ -44,6 +46,7 @@
 #backlight,
 #memory {
   background-color: @color-bg-module;
+  font-size: 16px;
   margin-top: 10px;
   margin-right: 15px;
   border-radius: 10px;

@@ -1,4 +1,4 @@
-  "layer": "top",
+{  "layer": "top",
   "position": "top",
   "height": 32,
   "spacing": 0,
@@ -48,7 +48,7 @@
       "critical": 15
     },
     "format": "<span color='#28CD41'> {icon} </span>{capacity}% ",
-    "format-charging": " 󱐋{capacity}%",
+    "format-charging": " 󱐋 {capacity}% ",
 	  "interval": 1,
     "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
     "tooltip": true
@@ -66,7 +66,7 @@
       "default": [
         "<span color='#808080'>  </span>",
         "<span color='#FFFF66'>  </span>",
-        "<span color='#00FF7F'>  </span>"
+        "<span color='#00FF7F'>   </span>"
       ]
     },
     "on-click-right": "pavucontrol -t 3",
@@ -82,7 +82,7 @@
   "clock": {
     "interval": 1,
     "timezone": "Asia/Kolkata",
-    "format": "<span color='#BF00FF'>  </span>{:%H:%M} ", 
+    "format": "<span color='#BF00FF'>  </span>{:%H:%M %d %B} ", 
     "tooltip-format": " {:%A, %B %d, %Y } ",
   },
   "tray": {
@@ -101,7 +101,7 @@
     ]
   },
   "bluetooth": {
-    "format": "<span color='#00BFFF'>  </span>{status} ",
+    "format": "<span color='#00BFFF'>  </span>None ",
     "format-connected": "<span color='#00BFFF'>  </span>{device_alias} ",
   }
 }
