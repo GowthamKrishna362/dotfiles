@@ -1,7 +1,8 @@
 # Font configuration
 
 [font]
-size = 10.0
+# i3wm - 8
+size = 13.0
 
 [env]
 TERM = "xterm-256color"

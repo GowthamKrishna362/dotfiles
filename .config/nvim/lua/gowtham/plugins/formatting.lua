@@ -17,6 +17,7 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+        scss = { "prettier" },
         java = { "google_java_format" },
       },
       formatters = {

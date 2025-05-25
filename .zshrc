@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-source ~/.bash_profile
+# source ~/.bash_profile
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -70,7 +70,7 @@ PROMPT='%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,10 +104,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
+
 function osd() {
   openvpn3 session-manage --session-path "$1" --disconnect
 }
 
+source ~/.bash_profile
 export EDITOR="nvim"
 alias ll='ls -alF'
 alias la='ls -A'
@@ -125,12 +129,14 @@ alias commentHijackFilter='(cd ./director/web/src/main/webapp/WEB-INF && sed -i 
 alias uncommentHijackFilter='(cd ./director/web/src/main/webapp/WEB-INF && sed -i "75,82 s/^<!-- //; 75,82 s/ -->\$//" web.xml)'
 alias install8080="cdkdc && commentHijackFilter && cdkdc && mvn clean install -Dskiptests"
 alias start8080="cdkdc && uncommentHijackFilter && mvn cargo:run"
-alias start3000="cdwebr && npm start"
+# alias install8080="cdkdc && mvn clean install -Dskiptests"
+# alias start8080="cdkdc && mvn cargo:run"
+# alias start3000="cdwebr && npm start"
 alias cdkomp="cd ~/Desktop/Work/Komprise/"
 alias cdwork="cd ~/Desktop/Work/"
 alias killport='f() { lsof -t -i:$1 | xargs kill -9; }; f'
 # alias cd="z"
-# eval "$(zoxide init --cmd cd zsh)"     
+eval "$(zoxide init --cmd cd zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

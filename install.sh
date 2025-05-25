@@ -18,23 +18,30 @@ cli_tools=(
 )
 
 dev_tools=(
-  neovim nodejs npm
+ code neovim nodejs npm
 )
 
 utils=(
-  xclip trash-cli lazygit
+  xclip trash-cli lazygit bluez bluez-utils blueman
 )
 
 misc=(
-  ttf-jetbrains-mono-nerd
+  ttf-jetbrains-mono-nerd lsof 
 )
 
-for pkg in "${base_pkgs[@]}" "${wm_pkgs[@]}" "${cli_tools[@]}" "${dev_tools[@]}" "${utils[@]}" "${misc[@]}"; do
+hyprland=(
+  hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gnome
+  pipewire wireplumber
+  grim slurp
+)
+
+for pkg in "${base_pkgs[@]}" "${wm_pkgs[@]}" "${cli_tools[@]}" "${dev_tools[@]}" "${utils[@]}" "${misc[@]}" "${hyprland[@]}"; do
   sudo pacman -S --noconfirm --needed "$pkg" || echo "❌ Failed to install $pkg"
 done
 
-yay -S --noconfirm google-chrome
-yay -S --noconfirm slack-desktop
+
+sudo yay -S --noconfirm google-chrome
+sudo yay -S --noconfirm slack-desktop
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -46,6 +53,6 @@ rm ~/.zshrc
 rm ~/.bashrc
 cd ~/dotfiles/ && stow . 
 
-
+sudo systemctl enable bluetooth.service
 chsh -s $(which zsh)
 
