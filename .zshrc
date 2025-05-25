@@ -111,6 +111,11 @@ function osd() {
   openvpn3 session-manage --session-path "$1" --disconnect
 }
 
+function walset() {
+  wal -n -i "$@"
+  swww img "~/.cache/wal/wal"
+}
+
 source ~/.bash_profile
 export EDITOR="nvim"
 alias ll='ls -alF'
@@ -120,6 +125,7 @@ alias cdvimconf="cd ~/dotfiles/.config/nvim/"
 alias vimconf="cdvimconf && nvim ."
 alias piconf="nvim ~/dotfiles/.config/picom.conf"
 alias i3conf="nvim ~/dotfiles/.config/i3"
+alias hyconf="nvim ~/dotfiles/.config/hypr/"
 alias vim="nvim"
 alias v="nvim"
 alias startvpn="openvpn3 session-start --config device_1735802922618_gowtham_krishna@komprise_com@komprise.openvpn.com_\[San_Jose_\(CA\)\].ovpn"

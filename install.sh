@@ -41,8 +41,9 @@ for pkg in "${base_pkgs[@]}" "${wm_pkgs[@]}" "${cli_tools[@]}" "${dev_tools[@]}"
 done
 
 
-sudo yay -S --noconfirm google-chrome
-sudo yay -S --noconfirm slack-desktop
+yay -S --noconfirm google-chrome
+yay -S --noconfirm slack-desktop
+yay -S --noconfirm hyprshot
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
