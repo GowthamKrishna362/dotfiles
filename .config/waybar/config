@@ -7,7 +7,6 @@
   ],
   "modules-center": [
     "clock",
-    "tray"
   ],
   "modules-right": [
     "network",
@@ -103,5 +102,6 @@
   "bluetooth": {
     "format": "<span color='#00BFFF'>  </span>None ",
     "format-connected": "<span color='#00BFFF'>  </span>{device_alias} ",
+    "on-click": "blueman-manager",
   }
 }
