@@ -18,11 +18,28 @@ cli_tools=(
 )
 
 dev_tools=(
+<<<<<<< Updated upstream
  code neovim nodejs npm
 )
 
 utils=(
   xclip trash-cli lazygit bluez bluez-utils blueman
+=======
+  code 
+  neovim 
+  nodejs 
+  npm
+)
+
+utils=(
+  xclip 
+  trash-cli 
+  lazygit 
+  bluez 
+  bluez-utils 
+  blueman 
+  brightnessctl
+>>>>>>> Stashed changes
 )
 
 misc=(
