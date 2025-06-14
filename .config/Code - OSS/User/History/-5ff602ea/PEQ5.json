@@ -1,0 +1,37 @@
+[
+  {
+    "key": "alt+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.navigateDown"
+  },
+  // {
+  //   "key": "alt+x",
+  //   "command": "workbench.action.closeEditorsInGroup",
+  //   "when": "editorTextFocus && vim.active && !inDebugRepl"
+  // },
+  // {
+  //   "key": "alt+x", 
+  //   "command": "workbench.action.closeSidebar",
+  //   "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'"
+  // },
+  {
+    "key": "alt+x", 
+    "command": "workbench.action.closePanel",
+  },
+  {
+    "key": "capslock",
+    "command": "extension.vim_escape",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  }
+]

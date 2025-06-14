@@ -1,0 +1,106 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "d1e4717458d7121dd2a52c7da0f85d6596dc7c52bb2c3cb17e339be0eb1ddb29",
+    "telemetry.devDeviceId": "8b904e9b-b51a-46bd-a6cb-8216a3bef9b6",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/gowtham/Desktop/Personal/openvpn3-gui"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/gowtham/Desktop/Work/Komprise/kpsrc/kdc/director/web-react": "__default__profile__",
+            "file:///home/gowtham/Desktop/Work/Komprise/kpsrc/kdc": "__default__profile__",
+            "file:///home/gowtham": "__default__profile__",
+            "file:///home/gowtham/Desktop/Personal/treelearn": "__default__profile__",
+            "file:///home/gowtham/.config/Code%20-%20OSS/User": "__default__profile__",
+            "file:///home/gowtham/Desktop/Personal/openvpn3-gui": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1f1f1f",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#cccccc",
+            "background": "#1f1f1f",
+            "editorBackground": "#1f1f1f",
+            "titleBarBackground": "#181818",
+            "titleBarBorder": "#2b2b2b",
+            "activityBarBackground": "#181818",
+            "activityBarBorder": "#2b2b2b",
+            "sideBarBackground": "#181818",
+            "sideBarBorder": "#2b2b2b",
+            "statusBarBackground": "#181818",
+            "statusBarBorder": "#2b2b2b",
+            "statusBarNoFolderBackground": "#1f1f1f"
+        },
+        "layoutInfo": {
+            "sideBarSide": "right",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 567,
+            "auxiliarySideBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 567,
+            "auxiliaryBarWidth": 300,
+            "workspaces": {
+                "966e51876fab621bf3352c07d41e9b6a": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "fd61af32e386835f0acbbb1db49be25e": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "ae45e4b8571ec6994de4bdb0ac652ebd": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "3618aab4e6263e03dd35d1d0fc6af961": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "333fd54a7c76b3b87da3a50df5b6f186": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "2f4d753fe8c2b6757cf83de1e0c20083": {
+                    "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                },
+                "b1aa9323556756813a80009ead44702a": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                }
+            }
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/gowtham/Desktop/Personal/openvpn3-gui",
+            "backupPath": "/home/gowtham/.config/Code - OSS/Backups/6d64d7d21a6ddd1492944aa60b30569f",
+            "uiState": {
+                "mode": 1,
+                "x": 0,
+                "y": 0,
+                "width": 1920,
+                "height": 1080
+            }
+        },
+        "openedWindows": []
+    }
+}

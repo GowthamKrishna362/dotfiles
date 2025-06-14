@@ -1,0 +1,16 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.lineNumbers": "relative",
+    "files.exclude": {
+    "**/node_modules": true
+  },
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "leader",
+        "sv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+@import '~scss/base/typography';
+
+.tag-library {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &__header {
+    min-height: 90px;
+    border-bottom: 1px solid $light-periwinkle;
+  }
+  &__content {
+    display: flex;
+    flex-grow: 1;
+    &--left {
+      min-width: 350px;
+      border-right: 1px solid $light-periwinkle;
+    }
+    &--right {
+      flex-grow: 1;
+    }
+  }
+}

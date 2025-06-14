@@ -1,0 +1,24 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.lineNumbers": "relative",
+    "files.exclude": {
+    "**/node_modules": true
+  },
+  "keyboard.dispatch": "keyCode",
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "leader",
+        "sv"
+      ],
+      "commands": ["workbench."]
+    }
+   ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<capslock>"],
+      "after": ["<Esc>"]
+    }
+  ] 
+}

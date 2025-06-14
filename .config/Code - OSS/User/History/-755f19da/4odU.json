@@ -1,0 +1,66 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.lineNumbers": "relative",
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "keyboard.dispatch": "keyCode",
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+  "vim.foldfix": true,
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "white",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "leader",
+        "s",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.splitEditorRight"
+      ]
+    },
+    {
+      "before": [
+        "-"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.navigateBack"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "<capslock>"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
+}
