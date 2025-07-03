@@ -26,6 +26,10 @@
     "when": "sideBarVisible && !editorTextFocus"
   },
   {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleActivityBarVisibility",
+  },
+  {
     "key": "space f b",
     "command": "workbench.action.showAllEditors",
     "when": "vim.mode == 'Normal' && editorTextFocus"

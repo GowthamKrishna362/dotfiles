@@ -1,4 +1,7 @@
 {
+  "workbench.editor.showTabs": "none",
+  "workbench.sideBar.location": "right",
+  "editor.minimap.enabled": false,
   "files.autoSave": "afterDelay",
   "editor.lineNumbers": "relative",
   "editor.smoothScrolling": true,
@@ -52,6 +55,10 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.sideBar.location": "right"
+  "workbench.activityBar.location": "hidden",
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.layoutControl.enabled": false,
 }
 
