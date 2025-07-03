@@ -21,13 +21,53 @@
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
   {
-    "key": "alt+x", 
+    "key": "alt+x",
     "command": "workbench.action.closeSidebar",
-    "when": "sideBarVisible && !editorTextFocus" 
+    "when": "sideBarVisible && !editorTextFocus"
   },
   {
-    "key": "capslock",
-    "command": "extension.vim_escape",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  }
+    "key": "space f b",
+    "command": "workbench.action.showAllEditors",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space f s",
+    "command": "workbench.action.findInFiles",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space space",
+    "command": "workbench.action.quickOpen",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "-",
+    "command": "workbench.view.explorer",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space s v",
+    "command": "workbench.action.splitEditorRight",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key":  "g d",
+    "command": "editor.action.revealDefinition",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "g j",
+    "command": "workbench.action.navigateBack",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "g R",
+    "command":"editor.action.referenceSearch.trigger" ,
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "g c c",
+    "command": "editor.action.commentLine",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
 ]
