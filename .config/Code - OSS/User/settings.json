@@ -13,6 +13,36 @@
   "vim.highlightedyank.enable": true,
   "vim.highlightedyank.textColor": "white",
   "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.navigateBack"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "R"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    }
+  ],
+
   "vim.insertModeKeyBindings": [
     {
       "before": ["<capslock>"],
@@ -24,3 +54,4 @@
   },
   "workbench.sideBar.location": "right"
 }
+

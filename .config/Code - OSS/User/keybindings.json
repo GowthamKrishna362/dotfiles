@@ -50,24 +50,4 @@
     "command": "workbench.action.splitEditorRight",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
-  {
-    "key":  "g d",
-    "command": "editor.action.revealDefinition",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "g j",
-    "command": "workbench.action.navigateBack",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "g R",
-    "command":"editor.action.referenceSearch.trigger" ,
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "g c c",
-    "command": "editor.action.commentLine",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
 ]
