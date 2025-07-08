@@ -1,0 +1,8 @@
+# Ignore VSCode (Code - OSS) user-specific data
+.config/Code - OSS/User/History/**
+.config/Code - OSS/User/globalStorage/**
+.config/Code - OSS/User/workspaceStorage/**
+
+.config/Cursor/User/History/**
+.config/Cursor/User/globalStorage/**
+.config/Cursor/User/workspaceStorage/**

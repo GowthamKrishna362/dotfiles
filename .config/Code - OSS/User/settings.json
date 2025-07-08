@@ -55,7 +55,6 @@
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.activityBar.location": "hidden",
   "window.menuBarVisibility": "compact",
   "window.commandCenter": false,
   "workbench.editor.editorActionsLocation": "hidden",
