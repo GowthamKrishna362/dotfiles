@@ -26,11 +26,7 @@
     {
       "before": ["g", "R"],
       "commands": ["editor.action.referenceSearch.trigger"]
-    }
-    {
-      "before": ["g", "R"],
-      "commands": ["editor.action.referenceSearch.trigger"]
-    }
+    },
   ],
 
   "vim.insertModeKeyBindings": [
@@ -50,6 +46,11 @@
   "window.menuBarVisibility": "compact",
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.layoutControl.enabled": false,
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+  "editor.fontSize": 16,
+  "catppuccin.italicKeywords": false,
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "window.titleBarStyle": "native",
+  "files.autoSave": "afterDelay"
 }
 
