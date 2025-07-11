@@ -20,13 +20,17 @@
       "commands": ["editor.action.revealDefinition"]
     },
     {
+      "before": ["<leader>", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
       "before": ["g", "j"],
       "commands": ["workbench.action.navigateBack"]
     },
     {
       "before": ["g", "R"],
       "commands": ["editor.action.referenceSearch.trigger"]
-    },
+    }
   ],
 
   "vim.insertModeKeyBindings": [
@@ -40,17 +44,26 @@
   },
   "workbench.activityBar.orientation": "vertical",
 
-
   "workbench.sideBar.location": "right",
   "workbench.editor.showTabs": "none",
   "window.menuBarVisibility": "compact",
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.layoutControl.enabled": false,
-  "workbench.activityBar.location": "hidden",
-  "editor.fontSize": 16,
+  "editor.fontSize": 17,
   "catppuccin.italicKeywords": false,
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Tokyo Night Storm",
   "window.titleBarStyle": "native",
-  "files.autoSave": "afterDelay"
-}
+  "files.autoSave": "afterDelay",
 
+  "window.customTitleBarVisibility": "auto",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.fontFamily": "\"JetBrainsMono Nerd Font\"",
+  "workbench.activityBar.location": "hidden"
+}
