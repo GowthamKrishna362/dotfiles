@@ -2,8 +2,8 @@
   "workbench.editor.showTabs": "none",
   "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
-  "files.autoSave": "afterDelay",
-  "editor.lineNumbers": "relative",
+  "files.autoSave": "off",
+  // "editor.lineNumbers": "relative",
   "editor.smoothScrolling": true,
   "files.exclude": {
     "**/node_modules": true
@@ -59,5 +59,48 @@
   "window.commandCenter": false,
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.layoutControl.enabled": false,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "-"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.open"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<cr>"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.select"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<c-l>"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.refresh"
+        }
+      ]
+    },
+    {
+      "before": [
+        "`"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.cd"
+        }
+      ]
+    }
+  ],
+  "debug.disassemblyView.showSourceCode": false,
 }
 

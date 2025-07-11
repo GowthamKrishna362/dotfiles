@@ -35,6 +35,11 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
+    "key": "space r n",
+    "command": "editor.action.rename",
+    "when": "vim.mode == 'Normal' && editorHasRenameProvider && editorTextFocus && !editorReadOnly"
+  },
+  {
     "key": "space f s",
     "command": "workbench.action.findInFiles",
     "when": "vim.mode == 'Normal' && editorTextFocus"
@@ -49,11 +54,11 @@
     "command": "workbench.action.quickOpen",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
-  {
-    "key": "-",
-    "command": "workbench.view.explorer",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
+  // {
+  //   "key": "-",
+  //   "command": "workbench.view.explorer",
+  //   "when": "vim.mode == 'Normal' && editorTextFocus"
+  // },
   {
     "key": "space s v",
     "command": "workbench.action.splitEditorRight",
@@ -103,13 +108,42 @@
     "command": "-workbench.action.quickOpen"
   },
   {
+    "key": "-",
+    "command": "voil.openPanelCurrentDir",
+    "when": "!voilDoc && vim.mode == 'Normal' && editorFocus"
+  },
+  {
+    "key": "-",
+    "command": "voil.gotoParentDir",
+    "when": "voilDoc && vim.mode == 'Normal' && editorFocus"
+  },
+  {
     "key": "alt+tab",
-    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-    "when": "!activeEditorGroupEmpty"
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
   },
   {
     "key": "ctrl+tab",
-    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-    "when": "!activeEditorGroupEmpty"
+    "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+tab",
+    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
   }
 ]

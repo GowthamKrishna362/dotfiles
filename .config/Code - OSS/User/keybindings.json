@@ -44,11 +44,11 @@
     "command": "workbench.action.quickOpen",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
-  {
-    "key": "-",
-    "command": "workbench.view.explorer",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
+  // {
+  //   "key": "-",
+  //   "command": "workbench.view.explorer",
+  //   "when": "vim.mode == 'Normal' && editorTextFocus"
+  // },
   {
     "key": "space s v",
     "command": "workbench.action.splitEditorRight",
