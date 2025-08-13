@@ -23,7 +23,17 @@
   {
     "key": "alt+x",
     "command": "workbench.action.closeSidebar",
-    "when": "sideBarVisible && !editorTextFocus"
+    "when": "sideBarVisible && !editorTextFocus && !panelFocus && !chatPanelFocus"
+  },
+  {
+    "key": "alt+x",
+    "command": "composer.closeComposerTab",
+    "when": "composerFocused && focusedView =~ /^workbench.panel.aichat.view/"
+  },
+  {
+    "key": "alt+x",
+    "command": "git.openFile",
+    "when": "isInDiffEditor"
   },
   {
     "key": "ctrl+b",
@@ -45,7 +55,12 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "alt+f",
+    "key": "space s m",
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space s e",
     "command": "workbench.action.toggleMaximizeEditorGroup",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
@@ -118,15 +133,6 @@
     "when": "voilDoc && vim.mode == 'Normal' && editorFocus"
   },
   {
-    "key": "alt+tab",
-    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor"
-  },
-  {
-    "key": "alt+j",
-    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
-    "when": "inEditorsPicker && inQuickOpen"
-  },
-  {
     "key": "ctrl+tab",
     "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
     "when": "inEditorsPicker && inQuickOpen"
@@ -145,5 +151,15 @@
     "key": "alt+tab",
     "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
     "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+tab",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "!inEditorsPicker"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
   }
 ]
