@@ -1,3 +1,7 @@
+sudo pacman -S curl
+
+curl https://files.snehit.dev/pacman-mirrorlist-in > /tmp/pacman-mirrors-in && cat /tmp/pacman-mirrors-in /etc/pacman.d/mirrorlist | sudo tee /etc/pacman.d/mirrorlist
+
 sudo pacman -Syu --noconfirm
 
 # sudo pacman -S --noconfirm --needed base-devel git
@@ -18,13 +22,11 @@ cli_tools=(
 )
 
 dev_tools=(
-<<<<<<< Updated upstream
  code neovim nodejs npm
 )
 
 utils=(
   xclip trash-cli lazygit bluez bluez-utils blueman
-=======
   code 
   neovim 
   nodejs 
@@ -39,7 +41,6 @@ utils=(
   bluez-utils 
   blueman 
   brightnessctl
->>>>>>> Stashed changes
 )
 
 misc=(

@@ -9,6 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 PROMPT='%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%~%{$reset_color%} '
+# ZSH_THEME=robbyrussell
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -116,7 +117,7 @@ function walset() {
   swww img "~/.cache/wal/wal"
 }
 
-source ~/.bash_profile
+# source ~/.bash_profile
 export EDITOR="nvim"
 alias ll='ls -alF'
 alias la='ls -A'
@@ -141,7 +142,6 @@ alias start3000="cdwebr && npm start"
 alias cdkomp="cd ~/Desktop/Work/Komprise/"
 alias cdwork="cd ~/Desktop/Work/"
 alias killport='f() { lsof -t -i:$1 | xargs kill -9; }; f'
-# alias cd="z"
 eval "$(zoxide init --cmd cd zsh)"
 
 export NVM_DIR="$HOME/.nvm"
