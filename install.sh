@@ -1,13 +1,8 @@
 sudo pacman -S curl
-
 curl https://files.snehit.dev/pacman-mirrorlist-in > /tmp/pacman-mirrors-in && cat /tmp/pacman-mirrors-in /etc/pacman.d/mirrorlist | sudo tee /etc/pacman.d/mirrorlist
 
 sudo pacman -Syu --noconfirm
 
-# sudo pacman -S --noconfirm --needed base-devel git
-# git clone https://aur.archlinux.org/yay-git.git
-# cd yay-git
-# makepkg -sri --noconfirm
 
 base_pkgs=(
   git curl stow ripgrep python-pip
@@ -49,9 +44,10 @@ misc=(
 
 hyprland=(
   hyprland xdg-desktop-portal-hyprland xdg-desktop-portal-gnome
-  pipewire wireplumber
+  waybar
+  pipewire pipewire-pulse wireplumber
   grim slurp
-  hyprlock swww waypaper
+  hyprlock swww 
 )
 
 for pkg in "${base_pkgs[@]}" "${wm_pkgs[@]}" "${cli_tools[@]}" "${dev_tools[@]}" "${utils[@]}" "${misc[@]}" "${hyprland[@]}"; do
@@ -62,6 +58,8 @@ done
 yay -S --noconfirm google-chrome
 yay -S --noconfirm slack-desktop
 yay -S --noconfirm hyprshot
+yay -S --noconfirm waypaper
+
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
@@ -74,5 +72,6 @@ rm ~/.bashrc
 cd ~/dotfiles/ && stow . 
 
 sudo systemctl enable bluetooth.service
+sudo systemctl enable pipewire pipewire-pulse
 chsh -s $(which zsh)
 
